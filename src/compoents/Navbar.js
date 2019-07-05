@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ScrollspyNav from "react-scrollspy-nav";
 
 export default class Navbar extends Component {
     render() {
@@ -24,43 +25,49 @@ export default class Navbar extends Component {
                         <div
                             className="collapse navbar-collapse ml-5"
                             id="navbarCollapse">
-                            <ul className="navbar-nav mx-5 ">
-                                <li className="nav-item m-4">
-                                    <a
-                                        href="#create-head-section"
-                                        className="nav-link">
-                                        Home
-                                    </a>
-                                </li>
-                                <li className="nav-item m-4">
-                                    <a
-                                        href="#share-head-section"
-                                        className="nav-link">
-                                        Ride
-                                    </a>
-                                </li>
-                                <li className="nav-item m-4">
-                                    <a
-                                        href="#share-head-section"
-                                        className="nav-link">
-                                        Fair Estimation
-                                    </a>
-                                </li>
-                                <li className="nav-item m-4">
-                                    <a
-                                        href="#share-head-section"
-                                        className="nav-link">
-                                        Features
-                                    </a>
-                                </li>
-                                <li className="nav-item m-4">
-                                    <a
-                                        href="#share-head-section"
-                                        className="nav-link">
-                                        News
-                                    </a>
-                                </li>
-                            </ul>
+                            <ScrollspyNav
+                                scrollTargetIds={[
+                                    "home-section",
+                                    "DriverRider",
+                                    "WhereTo",
+                                    "sharing",
+                                    "news"
+                                ]}
+                                activeNavClass="is-active"
+                                scrollDuration="1000"
+                                headerBackground="true">
+                                <ul className="navbar-nav mx-5 ">
+                                    <li className="nav-item m-4">
+                                        <a
+                                            href="#home-section"
+                                            className="nav-link">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li className="nav-item m-4">
+                                        <a
+                                            href="#DriverRider"
+                                            className="nav-link">
+                                            Ride
+                                        </a>
+                                    </li>
+                                    <li className="nav-item m-4">
+                                        <a href="#WhereTo" className="nav-link">
+                                            Fair Estimation
+                                        </a>
+                                    </li>
+                                    <li className="nav-item m-4">
+                                        <a href="#sharing" className="nav-link">
+                                            Features
+                                        </a>
+                                    </li>
+                                    <li className="nav-item m-4">
+                                        <a href="#news" className="nav-link">
+                                            News
+                                        </a>
+                                    </li>
+                                </ul>
+                            </ScrollspyNav>
                         </div>
                         <div className="">
                             <ul className="navbar-nav ml-auto ">
